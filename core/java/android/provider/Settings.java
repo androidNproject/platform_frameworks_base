@@ -1789,6 +1789,7 @@ public final class Settings {
             // these were originally in system but migrated to secure in the past,
             // so are duplicated in the Secure.* namespace
             MOVED_TO_SECURE_THEN_GLOBAL.add(Global.ADB_ENABLED);
+            MOVED_TO_SECURE_THEN_GLOBAL.add(Global.ADVANCED_REBOOT);
             MOVED_TO_SECURE_THEN_GLOBAL.add(Global.BLUETOOTH_ON);
             MOVED_TO_SECURE_THEN_GLOBAL.add(Global.DATA_ROAMING);
             MOVED_TO_SECURE_THEN_GLOBAL.add(Global.DEVICE_PROVISIONED);
@@ -3817,7 +3818,9 @@ public final class Settings {
          */
         @Deprecated
         public static final String ADB_ENABLED = Global.ADB_ENABLED;
-
+        
+        @Deprecated
+        public static final String ADVANCED_REBOOT = Global.ADVANCED_REBOOT;
         /**
          * @deprecated Use {@link android.provider.Settings.Secure#ANDROID_ID} instead
          */
@@ -4090,6 +4093,7 @@ public final class Settings {
 
             MOVED_TO_GLOBAL = new HashSet<String>();
             MOVED_TO_GLOBAL.add(Settings.Global.ADB_ENABLED);
+            MOVED_TO_GLOBAL.add(Settings.Global.ADVANCED_REBOOT);
             MOVED_TO_GLOBAL.add(Settings.Global.ASSISTED_GPS_ENABLED);
             MOVED_TO_GLOBAL.add(Settings.Global.BLUETOOTH_ON);
             MOVED_TO_GLOBAL.add(Settings.Global.BUGREPORT_IN_POWER_MENU);
@@ -6774,7 +6778,10 @@ public final class Settings {
          * Whether ADB is enabled.
          */
         public static final String ADB_ENABLED = "adb_enabled";
-
+        
+        //adv reboot
+        public static final String ADVANCED_REBOOT = "advanced_reboot";
+        
         /**
          * Whether Views are allowed to save their attribute data.
          * @hide
